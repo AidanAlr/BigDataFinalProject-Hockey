@@ -1,0 +1,1136 @@
+25/12/06 01:24:22 INFO SparkEnv: Registering MapOutputTracker
+25/12/06 01:24:22 INFO SparkEnv: Registering BlockManagerMaster
+25/12/06 01:24:22 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/12/06 01:24:23 INFO SparkEnv: Registering OutputCommitCoordinator
+25/12/06 01:24:23 INFO MetricsConfig: Loaded properties from hadoop-metrics2.properties
+25/12/06 01:24:23 INFO MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+25/12/06 01:24:23 INFO MetricsSystemImpl: google-hadoop-file-system metrics system started
+25/12/06 01:24:24 INFO DataprocSparkPlugin: Registered 188 driver metrics
+25/12/06 01:24:24 INFO DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at cluster-3ccd-m.us-east1-b.c.awsgcp-comparison.internal./10.142.0.32:8032
+25/12/06 01:24:25 INFO AHSProxy: Connecting to Application History server at cluster-3ccd-m.us-east1-b.c.awsgcp-comparison.internal./10.142.0.32:10200
+25/12/06 01:24:25 INFO Configuration: resource-types.xml not found
+25/12/06 01:24:25 INFO ResourceUtils: Unable to find 'resource-types.xml'.
+25/12/06 01:24:26 INFO YarnClientImpl: Submitted application application_1764975477693_0005
+25/12/06 01:24:27 INFO DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at cluster-3ccd-m.us-east1-b.c.awsgcp-comparison.internal./10.142.0.32:8030
+25/12/06 01:24:28 INFO GoogleCloudStorageImpl: Ignoring exception of type GoogleJsonResponseException; verified object already exists with desired state.
+25/12/06 01:24:29 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES" ]
+Loading results data...
+/usr/lib/spark/python/lib/pyspark.zip/pyspark/sql/column.py:460: FutureWarning: A column as 'key' in getItem is deprecated as of Spark 3.0, and will not be supported in the future release. Use `column[key]` or `column.key` syntax instead.
+Loading and aggregating events data...
+25/12/06 01:25:01 INFO GhfsGlobalStorageStatistics: periodic connector metrics: {action_http_delete_request=4, action_http_delete_request_duration=163, action_http_delete_request_max=63, action_http_delete_request_mean=40, action_http_delete_request_min=31, action_http_post_request=10, action_http_post_request_duration=590, action_http_post_request_max=101, action_http_post_request_mean=59, action_http_post_request_min=28, action_http_put_request=5, action_http_put_request_duration=415, action_http_put_request_max=97, action_http_put_request_mean=83, action_http_put_request_min=65, directories_created=1, files_created=1, gcs_api_client_non_found_response_count=21, gcs_api_client_precondition_failed_response_count=1, gcs_api_client_side_error_count=22, gcs_api_time=2626, gcs_api_total_request_count=69, gcs_connector_time=2220, gcs_get_other_request=4, gcs_list_dir_request=4, gcs_list_dir_request_duration=97, gcs_list_dir_request_max=25, gcs_list_dir_request_mean=24, gcs_list_dir_request_min=23, gcs_list_file_request=8, gcs_list_file_request_duration=347, gcs_list_file_request_max=139, gcs_list_file_request_mean=43, gcs_list_file_request_min=15, gcs_metadata_request=33, gcs_metadata_request_duration=932, gcs_metadata_request_max=133, gcs_metadata_request_mean=28, gcs_metadata_request_min=15, gs_filesystem_create=4, gs_filesystem_initialize=3, op_create=1, op_create_duration=80, op_create_max=80, op_create_mean=80, op_create_min=80, op_exists=2, op_get_file_status=7, op_get_file_status_duration=616, op_get_file_status_max=420, op_get_file_status_mean=88, op_get_file_status_min=25, op_get_list_status_result_size=4, op_hflush=30, op_hflush_duration=1235, op_hflush_max=294, op_hflush_mean=41, op_list_status=4, op_list_status_duration=105, op_list_status_max=33, op_list_status_mean=26, op_list_status_min=19, op_mkdirs=1, op_mkdirs_duration=184, op_mkdirs_max=184, op_mkdirs_mean=184, op_mkdirs_min=184, stream_write_bytes=254105, uptimeSeconds=37}
+[CONTEXT ratelimit_period="5 MINUTES" ]
+Joining results with event aggregates...
+Total game-team records: 20227
+Computing rolling historical features...
+Creating matchup dataset...
+25/12/06 01:25:19 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+Total matchups: 9404
+25/12/06 01:25:29 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 98]" ]
+
+Train = 9150, Test = 254, Test season = 20162017
+
+============================================================
+Training Random Forest Classifier (Binary)...
+============================================================
+25/12/06 01:25:50 WARN DAGScheduler: Broadcasting large task binary with size 1139.5 KiB
+25/12/06 01:25:54 WARN DAGScheduler: Broadcasting large task binary with size 1991.1 KiB
+25/12/06 01:25:59 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:26:07 WARN DAGScheduler: Broadcasting large task binary with size 5.8 MiB
+25/12/06 01:26:13 WARN DAGScheduler: Broadcasting large task binary with size 1213.8 KiB
+25/12/06 01:26:18 WARN DAGScheduler: Broadcasting large task binary with size 9.2 MiB
+25/12/06 01:26:26 WARN DAGScheduler: Broadcasting large task binary with size 1673.4 KiB
+25/12/06 01:26:32 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 98]" ]
+25/12/06 01:26:33 WARN DAGScheduler: Broadcasting large task binary with size 13.8 MiB
+25/12/06 01:26:44 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:26:55 WARN DAGScheduler: Broadcasting large task binary with size 10.5 MiB
+25/12/06 01:27:02 WARN DAGScheduler: Broadcasting large task binary with size 10.5 MiB
+25/12/06 01:27:07 WARN DAGScheduler: Broadcasting large task binary with size 10.5 MiB
+25/12/06 01:27:13 WARN DAGScheduler: Broadcasting large task binary with size 10.5 MiB
+25/12/06 01:27:19 WARN DAGScheduler: Broadcasting large task binary with size 10.5 MiB
+
+============================================================
+Random Forest Results (Binary: Win vs Not Win)
+============================================================
+Accuracy: 0.5394
+AUC-ROC: 0.5140
+Precision: 0.6108
+Recall: 0.6623
+F1 Score: 0.6355
+
+Confusion Matrix:
+25/12/06 01:27:25 WARN DAGScheduler: Broadcasting large task binary with size 10.5 MiB
+25/12/06 01:27:31 WARN DAGScheduler: Broadcasting large task binary with size 10.5 MiB
++------------+----------+-----+
+|label_binary|prediction|count|
++------------+----------+-----+
+|         0.0|       0.0|   35|
+|         0.0|       1.0|   65|
+|         1.0|       0.0|   52|
+|         1.0|       1.0|  102|
++------------+----------+-----+
+
+
+Random Forest Feature Importances:
+----------------------------------------
+  corsi_diff                     0.0544
+  win_pct_diff                   0.0513
+  home_goals_avg                 0.0490
+  goals_avg_diff                 0.0487
+  home_points_avg                0.0445
+  away_shots_avg                 0.0441
+  away_goals_avg                 0.0440
+  home_shots_avg                 0.0436
+  away_recent_goals              0.0435
+  away_win_pct                   0.0421
+
+============================================================
+Training Logistic Regression (Binary)...
+============================================================
+25/12/06 01:27:32 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 80]" ]
+25/12/06 01:27:37 INFO OWLQN: Step Size: 0.3846
+25/12/06 01:27:37 INFO OWLQN: Val and Grad Norm: 0.686932 (rel: 0.00390) 0.0520271
+25/12/06 01:27:37 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:37 INFO OWLQN: Val and Grad Norm: 0.685399 (rel: 0.00223) 0.0195225
+25/12/06 01:27:37 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:37 INFO OWLQN: Val and Grad Norm: 0.685108 (rel: 0.000425) 0.0125688
+25/12/06 01:27:37 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:37 INFO OWLQN: Val and Grad Norm: 0.684906 (rel: 0.000296) 0.0117829
+25/12/06 01:27:38 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:38 INFO OWLQN: Val and Grad Norm: 0.684799 (rel: 0.000155) 0.00424255
+25/12/06 01:27:38 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:38 INFO OWLQN: Val and Grad Norm: 0.684749 (rel: 7.31e-05) 0.00659013
+25/12/06 01:27:38 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:38 INFO OWLQN: Val and Grad Norm: 0.684724 (rel: 3.65e-05) 0.00236317
+25/12/06 01:27:39 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:39 INFO OWLQN: Val and Grad Norm: 0.684703 (rel: 3.11e-05) 0.00408239
+25/12/06 01:27:39 INFO OWLQN: Step Size: 0.5000
+25/12/06 01:27:39 INFO OWLQN: Val and Grad Norm: 0.684698 (rel: 7.32e-06) 0.00237429
+25/12/06 01:27:40 INFO OWLQN: Step Size: 0.2500
+25/12/06 01:27:40 INFO OWLQN: Val and Grad Norm: 0.684691 (rel: 1.04e-05) 0.00133769
+25/12/06 01:27:40 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:40 INFO OWLQN: Val and Grad Norm: 0.684687 (rel: 5.78e-06) 0.000795020
+25/12/06 01:27:40 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:40 INFO OWLQN: Val and Grad Norm: 0.684684 (rel: 3.80e-06) 0.000706226
+25/12/06 01:27:41 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:41 INFO OWLQN: Val and Grad Norm: 0.684683 (rel: 1.58e-06) 0.000584275
+25/12/06 01:27:41 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:41 INFO OWLQN: Val and Grad Norm: 0.684682 (rel: 1.25e-06) 0.000883288
+25/12/06 01:27:41 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:41 INFO OWLQN: Val and Grad Norm: 0.684682 (rel: 3.57e-07) 0.00148423
+25/12/06 01:27:42 INFO OWLQN: Step Size: 0.5000
+25/12/06 01:27:42 INFO OWLQN: Val and Grad Norm: 0.684679 (rel: 4.57e-06) 0.000619685
+25/12/06 01:27:42 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:42 INFO OWLQN: Val and Grad Norm: 0.684675 (rel: 6.31e-06) 0.000428181
+25/12/06 01:27:42 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:42 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 1.55e-05) 0.000237750
+25/12/06 01:27:43 INFO OWLQN: Step Size: 0.2500
+25/12/06 01:27:43 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 5.25e-08) 0.000413515
+25/12/06 01:27:44 INFO OWLQN: Step Size: 0.2500
+25/12/06 01:27:44 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 2.08e-07) 0.000163702
+25/12/06 01:27:45 INFO OWLQN: Step Size: 0.1250
+25/12/06 01:27:45 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 1.52e-08) 0.000169471
+25/12/06 01:27:46 INFO OWLQN: Step Size: 0.1250
+25/12/06 01:27:46 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 1.44e-08) 0.000143851
+25/12/06 01:27:47 INFO OWLQN: Step Size: 0.1250
+25/12/06 01:27:47 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 1.31e-08) 0.000145048
+25/12/06 01:27:48 INFO OWLQN: Step Size: 0.1250
+25/12/06 01:27:48 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 9.50e-09) 0.000126875
+25/12/06 01:27:49 INFO OWLQN: Step Size: 0.1250
+25/12/06 01:27:49 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 1.14e-08) 0.000124273
+25/12/06 01:27:49 INFO OWLQN: Step Size: 0.2500
+25/12/06 01:27:49 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 1.38e-08) 0.000111602
+25/12/06 01:27:50 INFO OWLQN: Step Size: 0.2500
+25/12/06 01:27:50 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 4.22e-09) 0.000135551
+25/12/06 01:27:51 INFO OWLQN: Step Size: 0.2500
+25/12/06 01:27:51 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 1.86e-08) 8.35175e-05
+25/12/06 01:27:51 INFO OWLQN: Step Size: 0.5000
+25/12/06 01:27:51 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 4.65e-09) 9.61573e-05
+25/12/06 01:27:52 INFO OWLQN: Step Size: 0.5000
+25/12/06 01:27:52 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 1.14e-08) 5.72523e-05
+25/12/06 01:27:52 INFO OWLQN: Step Size: 0.5000
+25/12/06 01:27:52 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 4.04e-09) 5.04737e-05
+25/12/06 01:27:53 INFO OWLQN: Step Size: 0.5000
+25/12/06 01:27:53 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 2.41e-09) 5.10608e-05
+25/12/06 01:27:53 INFO OWLQN: Step Size: 0.5000
+25/12/06 01:27:53 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 3.34e-09) 3.79238e-05
+25/12/06 01:27:53 INFO OWLQN: Step Size: 1.000
+25/12/06 01:27:53 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 2.09e-09) 5.42018e-05
+25/12/06 01:27:54 INFO OWLQN: Step Size: 0.5000
+25/12/06 01:27:54 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 3.30e-09) 2.95322e-05
+25/12/06 01:27:54 INFO OWLQN: Step Size: 0.5000
+25/12/06 01:27:54 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 1.12e-09) 2.94071e-05
+25/12/06 01:27:55 INFO OWLQN: Step Size: 0.5000
+25/12/06 01:27:55 INFO OWLQN: Val and Grad Norm: 0.684664 (rel: 6.82e-10) 2.75847e-05
+25/12/06 01:27:55 INFO OWLQN: Converged because function values converged
+
+============================================================
+Logistic Regression Results (Binary: Win vs Not Win)
+============================================================
+Accuracy: 0.5512
+AUC-ROC: 0.4925
+Precision: 0.6020
+Recall: 0.7662
+F1 Score: 0.6743
+
+Confusion Matrix:
++------------+----------+-----+
+|label_binary|prediction|count|
++------------+----------+-----+
+|         0.0|       0.0|   22|
+|         0.0|       1.0|   78|
+|         1.0|       0.0|   36|
+|         1.0|       1.0|  118|
++------------+----------+-----+
+
+
+============================================================
+Training Gradient Boosted Trees (Binary)...
+============================================================
+25/12/06 01:28:32 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 705]" ]
+25/12/06 01:29:20 WARN DAGScheduler: Broadcasting large task binary with size 1010.9 KiB
+25/12/06 01:29:20 WARN DAGScheduler: Broadcasting large task binary with size 1015.4 KiB
+25/12/06 01:29:21 WARN DAGScheduler: Broadcasting large task binary with size 1015.8 KiB
+25/12/06 01:29:21 WARN DAGScheduler: Broadcasting large task binary with size 1016.5 KiB
+25/12/06 01:29:22 WARN DAGScheduler: Broadcasting large task binary with size 1017.5 KiB
+25/12/06 01:29:22 WARN DAGScheduler: Broadcasting large task binary with size 1019.8 KiB
+25/12/06 01:29:23 WARN DAGScheduler: Broadcasting large task binary with size 1024.3 KiB
+25/12/06 01:29:23 WARN DAGScheduler: Broadcasting large task binary with size 1033.3 KiB
+25/12/06 01:29:24 WARN DAGScheduler: Broadcasting large task binary with size 1050.5 KiB
+25/12/06 01:29:25 WARN DAGScheduler: Broadcasting large task binary with size 1053.3 KiB
+25/12/06 01:29:25 WARN DAGScheduler: Broadcasting large task binary with size 1053.8 KiB
+25/12/06 01:29:25 WARN DAGScheduler: Broadcasting large task binary with size 1054.5 KiB
+25/12/06 01:29:26 WARN DAGScheduler: Broadcasting large task binary with size 1055.5 KiB
+25/12/06 01:29:26 WARN DAGScheduler: Broadcasting large task binary with size 1057.7 KiB
+25/12/06 01:29:27 WARN DAGScheduler: Broadcasting large task binary with size 1062.2 KiB
+25/12/06 01:29:27 WARN DAGScheduler: Broadcasting large task binary with size 1070.1 KiB
+25/12/06 01:29:28 WARN DAGScheduler: Broadcasting large task binary with size 1083.8 KiB
+25/12/06 01:29:29 WARN DAGScheduler: Broadcasting large task binary with size 1085.9 KiB
+25/12/06 01:29:29 WARN DAGScheduler: Broadcasting large task binary with size 1086.3 KiB
+25/12/06 01:29:29 WARN DAGScheduler: Broadcasting large task binary with size 1087.1 KiB
+25/12/06 01:29:30 WARN DAGScheduler: Broadcasting large task binary with size 1088.0 KiB
+25/12/06 01:29:30 WARN DAGScheduler: Broadcasting large task binary with size 1090.3 KiB
+25/12/06 01:29:31 WARN DAGScheduler: Broadcasting large task binary with size 1094.8 KiB
+25/12/06 01:29:31 WARN DAGScheduler: Broadcasting large task binary with size 1103.9 KiB
+25/12/06 01:29:32 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 535]" ]
+25/12/06 01:29:32 WARN DAGScheduler: Broadcasting large task binary with size 1121.4 KiB
+25/12/06 01:29:33 WARN DAGScheduler: Broadcasting large task binary with size 1124.8 KiB
+25/12/06 01:29:33 WARN DAGScheduler: Broadcasting large task binary with size 1125.2 KiB
+25/12/06 01:29:34 WARN DAGScheduler: Broadcasting large task binary with size 1126.0 KiB
+25/12/06 01:29:34 WARN DAGScheduler: Broadcasting large task binary with size 1127.0 KiB
+25/12/06 01:29:35 WARN DAGScheduler: Broadcasting large task binary with size 1129.2 KiB
+25/12/06 01:29:35 WARN DAGScheduler: Broadcasting large task binary with size 1133.5 KiB
+25/12/06 01:29:36 WARN DAGScheduler: Broadcasting large task binary with size 1141.9 KiB
+25/12/06 01:29:37 WARN DAGScheduler: Broadcasting large task binary with size 1157.7 KiB
+25/12/06 01:29:37 WARN DAGScheduler: Broadcasting large task binary with size 1159.9 KiB
+25/12/06 01:29:38 WARN DAGScheduler: Broadcasting large task binary with size 1160.4 KiB
+25/12/06 01:29:38 WARN DAGScheduler: Broadcasting large task binary with size 1161.1 KiB
+25/12/06 01:29:39 WARN DAGScheduler: Broadcasting large task binary with size 1162.1 KiB
+25/12/06 01:29:39 WARN DAGScheduler: Broadcasting large task binary with size 1164.4 KiB
+25/12/06 01:29:40 WARN DAGScheduler: Broadcasting large task binary with size 1168.9 KiB
+25/12/06 01:29:41 WARN DAGScheduler: Broadcasting large task binary with size 1177.4 KiB
+25/12/06 01:29:41 WARN DAGScheduler: Broadcasting large task binary with size 1193.5 KiB
+25/12/06 01:29:42 WARN DAGScheduler: Broadcasting large task binary with size 1196.3 KiB
+25/12/06 01:29:43 WARN DAGScheduler: Broadcasting large task binary with size 1196.7 KiB
+25/12/06 01:29:43 WARN DAGScheduler: Broadcasting large task binary with size 1197.4 KiB
+25/12/06 01:29:44 WARN DAGScheduler: Broadcasting large task binary with size 1198.4 KiB
+25/12/06 01:29:44 WARN DAGScheduler: Broadcasting large task binary with size 1200.7 KiB
+25/12/06 01:29:44 WARN DAGScheduler: Broadcasting large task binary with size 1205.2 KiB
+25/12/06 01:29:45 WARN DAGScheduler: Broadcasting large task binary with size 1214.2 KiB
+25/12/06 01:29:46 WARN DAGScheduler: Broadcasting large task binary with size 1230.1 KiB
+25/12/06 01:29:47 WARN DAGScheduler: Broadcasting large task binary with size 1231.9 KiB
+25/12/06 01:29:47 WARN DAGScheduler: Broadcasting large task binary with size 1232.4 KiB
+25/12/06 01:29:47 WARN DAGScheduler: Broadcasting large task binary with size 1233.1 KiB
+25/12/06 01:29:48 WARN DAGScheduler: Broadcasting large task binary with size 1234.1 KiB
+25/12/06 01:29:48 WARN DAGScheduler: Broadcasting large task binary with size 1235.8 KiB
+25/12/06 01:29:49 WARN DAGScheduler: Broadcasting large task binary with size 1239.2 KiB
+25/12/06 01:29:49 WARN DAGScheduler: Broadcasting large task binary with size 1245.4 KiB
+25/12/06 01:29:50 WARN DAGScheduler: Broadcasting large task binary with size 1256.2 KiB
+25/12/06 01:29:51 WARN DAGScheduler: Broadcasting large task binary with size 1257.5 KiB
+25/12/06 01:29:51 WARN DAGScheduler: Broadcasting large task binary with size 1258.0 KiB
+25/12/06 01:29:52 WARN DAGScheduler: Broadcasting large task binary with size 1258.7 KiB
+25/12/06 01:29:52 WARN DAGScheduler: Broadcasting large task binary with size 1259.7 KiB
+25/12/06 01:29:53 WARN DAGScheduler: Broadcasting large task binary with size 1261.9 KiB
+25/12/06 01:29:53 WARN DAGScheduler: Broadcasting large task binary with size 1265.6 KiB
+25/12/06 01:29:54 WARN DAGScheduler: Broadcasting large task binary with size 1272.7 KiB
+25/12/06 01:29:54 WARN DAGScheduler: Broadcasting large task binary with size 1285.1 KiB
+25/12/06 01:29:55 WARN DAGScheduler: Broadcasting large task binary with size 1286.4 KiB
+25/12/06 01:29:56 WARN DAGScheduler: Broadcasting large task binary with size 1286.9 KiB
+25/12/06 01:29:56 WARN DAGScheduler: Broadcasting large task binary with size 1287.6 KiB
+25/12/06 01:29:57 WARN DAGScheduler: Broadcasting large task binary with size 1288.6 KiB
+25/12/06 01:29:57 WARN DAGScheduler: Broadcasting large task binary with size 1290.8 KiB
+25/12/06 01:29:58 WARN DAGScheduler: Broadcasting large task binary with size 1295.3 KiB
+25/12/06 01:29:58 WARN DAGScheduler: Broadcasting large task binary with size 1303.4 KiB
+25/12/06 01:29:59 WARN DAGScheduler: Broadcasting large task binary with size 1316.8 KiB
+25/12/06 01:30:00 WARN DAGScheduler: Broadcasting large task binary with size 1318.2 KiB
+25/12/06 01:30:00 WARN DAGScheduler: Broadcasting large task binary with size 1318.6 KiB
+25/12/06 01:30:01 INFO GhfsGlobalStorageStatistics: periodic connector metrics: {action_http_delete_request=57, action_http_delete_request_duration=2102, action_http_delete_request_max=88, action_http_delete_request_mean=36, action_http_delete_request_min=26, action_http_post_request=117, action_http_post_request_duration=6008, action_http_post_request_max=139, action_http_post_request_mean=51, action_http_post_request_min=24, action_http_put_request=58, action_http_put_request_duration=5824, action_http_put_request_max=184, action_http_put_request_mean=100, action_http_put_request_min=65, directories_created=1, files_created=1, gcs_api_client_non_found_response_count=180, gcs_api_client_precondition_failed_response_count=1, gcs_api_client_side_error_count=181, gcs_api_time=20250, gcs_api_total_request_count=493, gcs_connector_time=15082, gcs_get_other_request=57, gcs_list_dir_request=4, gcs_list_dir_request_duration=97, gcs_list_dir_request_max=25, gcs_list_dir_request_mean=24, gcs_list_dir_request_min=23, gcs_list_file_request=8, gcs_list_file_request_duration=347, gcs_list_file_request_max=139, gcs_list_file_request_mean=43, gcs_list_file_request_min=15, gcs_metadata_request=192, gcs_metadata_request_duration=4783, gcs_metadata_request_max=133, gcs_metadata_request_mean=24, gcs_metadata_request_min=13, gs_filesystem_create=4, gs_filesystem_initialize=3, op_create=1, op_create_duration=80, op_create_max=80, op_create_mean=80, op_create_min=80, op_exists=2, op_get_file_status=7, op_get_file_status_duration=616, op_get_file_status_max=420, op_get_file_status_mean=88, op_get_file_status_min=25, op_get_list_status_result_size=4, op_hflush=1795, op_hflush_duration=14097, op_hflush_max=339, op_hflush_mean=7, op_list_status=4, op_list_status_duration=105, op_list_status_max=33, op_list_status_mean=26, op_list_status_min=19, op_mkdirs=1, op_mkdirs_duration=184, op_mkdirs_max=184, op_mkdirs_mean=184, op_mkdirs_min=184, stream_write_bytes=221328988, uptimeSeconds=337}
+[CONTEXT ratelimit_period="5 MINUTES [skipped: 1764]" ]
+25/12/06 01:30:01 WARN DAGScheduler: Broadcasting large task binary with size 1319.3 KiB
+25/12/06 01:30:01 WARN DAGScheduler: Broadcasting large task binary with size 1320.3 KiB
+25/12/06 01:30:02 WARN DAGScheduler: Broadcasting large task binary with size 1322.6 KiB
+25/12/06 01:30:02 WARN DAGScheduler: Broadcasting large task binary with size 1327.1 KiB
+25/12/06 01:30:03 WARN DAGScheduler: Broadcasting large task binary with size 1336.1 KiB
+25/12/06 01:30:03 WARN DAGScheduler: Broadcasting large task binary with size 1352.8 KiB
+25/12/06 01:30:04 WARN DAGScheduler: Broadcasting large task binary with size 1355.4 KiB
+25/12/06 01:30:05 WARN DAGScheduler: Broadcasting large task binary with size 1355.9 KiB
+25/12/06 01:30:05 WARN DAGScheduler: Broadcasting large task binary with size 1356.6 KiB
+25/12/06 01:30:06 WARN DAGScheduler: Broadcasting large task binary with size 1357.6 KiB
+25/12/06 01:30:06 WARN DAGScheduler: Broadcasting large task binary with size 1359.9 KiB
+25/12/06 01:30:07 WARN DAGScheduler: Broadcasting large task binary with size 1364.4 KiB
+25/12/06 01:30:07 WARN DAGScheduler: Broadcasting large task binary with size 1372.5 KiB
+25/12/06 01:30:08 WARN DAGScheduler: Broadcasting large task binary with size 1388.2 KiB
+25/12/06 01:30:09 WARN DAGScheduler: Broadcasting large task binary with size 1391.1 KiB
+25/12/06 01:30:09 WARN DAGScheduler: Broadcasting large task binary with size 1391.6 KiB
+25/12/06 01:30:10 WARN DAGScheduler: Broadcasting large task binary with size 1392.3 KiB
+25/12/06 01:30:10 WARN DAGScheduler: Broadcasting large task binary with size 1393.3 KiB
+25/12/06 01:30:11 WARN DAGScheduler: Broadcasting large task binary with size 1395.5 KiB
+25/12/06 01:30:11 WARN DAGScheduler: Broadcasting large task binary with size 1400.1 KiB
+25/12/06 01:30:12 WARN DAGScheduler: Broadcasting large task binary with size 1409.0 KiB
+25/12/06 01:30:13 WARN DAGScheduler: Broadcasting large task binary with size 1423.9 KiB
+25/12/06 01:30:13 WARN DAGScheduler: Broadcasting large task binary with size 1426.3 KiB
+25/12/06 01:30:14 WARN DAGScheduler: Broadcasting large task binary with size 1426.7 KiB
+25/12/06 01:30:15 WARN DAGScheduler: Broadcasting large task binary with size 1427.5 KiB
+25/12/06 01:30:15 WARN DAGScheduler: Broadcasting large task binary with size 1428.4 KiB
+25/12/06 01:30:16 WARN DAGScheduler: Broadcasting large task binary with size 1430.7 KiB
+25/12/06 01:30:16 WARN DAGScheduler: Broadcasting large task binary with size 1435.2 KiB
+25/12/06 01:30:17 WARN DAGScheduler: Broadcasting large task binary with size 1443.9 KiB
+25/12/06 01:30:18 WARN DAGScheduler: Broadcasting large task binary with size 1459.2 KiB
+25/12/06 01:30:18 WARN DAGScheduler: Broadcasting large task binary with size 1461.1 KiB
+25/12/06 01:30:19 WARN DAGScheduler: Broadcasting large task binary with size 1461.6 KiB
+25/12/06 01:30:19 WARN DAGScheduler: Broadcasting large task binary with size 1462.3 KiB
+25/12/06 01:30:20 WARN DAGScheduler: Broadcasting large task binary with size 1463.3 KiB
+25/12/06 01:30:20 WARN DAGScheduler: Broadcasting large task binary with size 1465.3 KiB
+25/12/06 01:30:21 WARN DAGScheduler: Broadcasting large task binary with size 1468.4 KiB
+25/12/06 01:30:22 WARN DAGScheduler: Broadcasting large task binary with size 1474.3 KiB
+25/12/06 01:30:22 WARN DAGScheduler: Broadcasting large task binary with size 1484.5 KiB
+25/12/06 01:30:23 WARN DAGScheduler: Broadcasting large task binary with size 1486.7 KiB
+25/12/06 01:30:24 WARN DAGScheduler: Broadcasting large task binary with size 1487.2 KiB
+25/12/06 01:30:24 WARN DAGScheduler: Broadcasting large task binary with size 1487.9 KiB
+25/12/06 01:30:25 WARN DAGScheduler: Broadcasting large task binary with size 1488.9 KiB
+25/12/06 01:30:25 WARN DAGScheduler: Broadcasting large task binary with size 1491.2 KiB
+25/12/06 01:30:26 WARN DAGScheduler: Broadcasting large task binary with size 1495.6 KiB
+25/12/06 01:30:26 WARN DAGScheduler: Broadcasting large task binary with size 1503.5 KiB
+25/12/06 01:30:27 WARN DAGScheduler: Broadcasting large task binary with size 1518.1 KiB
+25/12/06 01:30:28 WARN DAGScheduler: Broadcasting large task binary with size 1521.2 KiB
+25/12/06 01:30:29 WARN DAGScheduler: Broadcasting large task binary with size 1521.7 KiB
+25/12/06 01:30:29 WARN DAGScheduler: Broadcasting large task binary with size 1522.4 KiB
+25/12/06 01:30:30 WARN DAGScheduler: Broadcasting large task binary with size 1523.4 KiB
+25/12/06 01:30:30 WARN DAGScheduler: Broadcasting large task binary with size 1525.7 KiB
+25/12/06 01:30:31 WARN DAGScheduler: Broadcasting large task binary with size 1529.9 KiB
+25/12/06 01:30:31 WARN DAGScheduler: Broadcasting large task binary with size 1537.8 KiB
+25/12/06 01:30:32 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 439]" ]
+25/12/06 01:30:32 WARN DAGScheduler: Broadcasting large task binary with size 1551.7 KiB
+25/12/06 01:30:33 WARN DAGScheduler: Broadcasting large task binary with size 1553.3 KiB
+25/12/06 01:30:34 WARN DAGScheduler: Broadcasting large task binary with size 1553.8 KiB
+25/12/06 01:30:34 WARN DAGScheduler: Broadcasting large task binary with size 1554.5 KiB
+25/12/06 01:30:35 WARN DAGScheduler: Broadcasting large task binary with size 1555.5 KiB
+25/12/06 01:30:36 WARN DAGScheduler: Broadcasting large task binary with size 1557.8 KiB
+25/12/06 01:30:36 WARN DAGScheduler: Broadcasting large task binary with size 1562.3 KiB
+25/12/06 01:30:37 WARN DAGScheduler: Broadcasting large task binary with size 1571.1 KiB
+25/12/06 01:30:38 WARN DAGScheduler: Broadcasting large task binary with size 1588.3 KiB
+25/12/06 01:30:38 WARN DAGScheduler: Broadcasting large task binary with size 1590.5 KiB
+25/12/06 01:30:39 WARN DAGScheduler: Broadcasting large task binary with size 1590.9 KiB
+25/12/06 01:30:40 WARN DAGScheduler: Broadcasting large task binary with size 1591.6 KiB
+25/12/06 01:30:40 WARN DAGScheduler: Broadcasting large task binary with size 1592.6 KiB
+25/12/06 01:30:41 WARN DAGScheduler: Broadcasting large task binary with size 1594.9 KiB
+25/12/06 01:30:41 WARN DAGScheduler: Broadcasting large task binary with size 1599.4 KiB
+25/12/06 01:30:42 WARN DAGScheduler: Broadcasting large task binary with size 1608.0 KiB
+25/12/06 01:30:43 WARN DAGScheduler: Broadcasting large task binary with size 1622.3 KiB
+25/12/06 01:30:44 WARN DAGScheduler: Broadcasting large task binary with size 1625.0 KiB
+25/12/06 01:30:44 WARN DAGScheduler: Broadcasting large task binary with size 1625.5 KiB
+25/12/06 01:30:45 WARN DAGScheduler: Broadcasting large task binary with size 1626.2 KiB
+25/12/06 01:30:45 WARN DAGScheduler: Broadcasting large task binary with size 1627.2 KiB
+25/12/06 01:30:46 WARN DAGScheduler: Broadcasting large task binary with size 1629.4 KiB
+25/12/06 01:30:46 WARN DAGScheduler: Broadcasting large task binary with size 1634.0 KiB
+25/12/06 01:30:47 WARN DAGScheduler: Broadcasting large task binary with size 1642.9 KiB
+25/12/06 01:30:48 WARN DAGScheduler: Broadcasting large task binary with size 1659.5 KiB
+25/12/06 01:30:49 WARN DAGScheduler: Broadcasting large task binary with size 1663.4 KiB
+25/12/06 01:30:49 WARN DAGScheduler: Broadcasting large task binary with size 1663.9 KiB
+25/12/06 01:30:50 WARN DAGScheduler: Broadcasting large task binary with size 1664.6 KiB
+25/12/06 01:30:50 WARN DAGScheduler: Broadcasting large task binary with size 1665.6 KiB
+25/12/06 01:30:51 WARN DAGScheduler: Broadcasting large task binary with size 1667.9 KiB
+25/12/06 01:30:52 WARN DAGScheduler: Broadcasting large task binary with size 1672.4 KiB
+25/12/06 01:30:52 WARN DAGScheduler: Broadcasting large task binary with size 1681.1 KiB
+25/12/06 01:30:53 WARN DAGScheduler: Broadcasting large task binary with size 1697.1 KiB
+25/12/06 01:30:54 WARN DAGScheduler: Broadcasting large task binary with size 1699.2 KiB
+25/12/06 01:30:54 WARN DAGScheduler: Broadcasting large task binary with size 1699.7 KiB
+25/12/06 01:30:55 WARN DAGScheduler: Broadcasting large task binary with size 1700.4 KiB
+25/12/06 01:30:56 WARN DAGScheduler: Broadcasting large task binary with size 1701.4 KiB
+25/12/06 01:30:56 WARN DAGScheduler: Broadcasting large task binary with size 1703.7 KiB
+25/12/06 01:30:57 WARN DAGScheduler: Broadcasting large task binary with size 1708.2 KiB
+25/12/06 01:30:57 WARN DAGScheduler: Broadcasting large task binary with size 1716.2 KiB
+25/12/06 01:30:58 WARN DAGScheduler: Broadcasting large task binary with size 1729.8 KiB
+25/12/06 01:30:59 WARN DAGScheduler: Broadcasting large task binary with size 1731.6 KiB
+25/12/06 01:31:00 WARN DAGScheduler: Broadcasting large task binary with size 1732.1 KiB
+25/12/06 01:31:00 WARN DAGScheduler: Broadcasting large task binary with size 1732.8 KiB
+25/12/06 01:31:01 WARN DAGScheduler: Broadcasting large task binary with size 1733.8 KiB
+25/12/06 01:31:01 WARN DAGScheduler: Broadcasting large task binary with size 1736.1 KiB
+25/12/06 01:31:02 WARN DAGScheduler: Broadcasting large task binary with size 1740.6 KiB
+25/12/06 01:31:03 WARN DAGScheduler: Broadcasting large task binary with size 1749.4 KiB
+25/12/06 01:31:03 WARN DAGScheduler: Broadcasting large task binary with size 1765.9 KiB
+25/12/06 01:31:04 WARN DAGScheduler: Broadcasting large task binary with size 1768.8 KiB
+25/12/06 01:31:05 WARN DAGScheduler: Broadcasting large task binary with size 1769.2 KiB
+25/12/06 01:31:05 WARN DAGScheduler: Broadcasting large task binary with size 1769.9 KiB
+25/12/06 01:31:06 WARN DAGScheduler: Broadcasting large task binary with size 1770.9 KiB
+25/12/06 01:31:07 WARN DAGScheduler: Broadcasting large task binary with size 1773.2 KiB
+25/12/06 01:31:07 WARN DAGScheduler: Broadcasting large task binary with size 1777.7 KiB
+25/12/06 01:31:08 WARN DAGScheduler: Broadcasting large task binary with size 1786.8 KiB
+25/12/06 01:31:09 WARN DAGScheduler: Broadcasting large task binary with size 1804.0 KiB
+25/12/06 01:31:10 WARN DAGScheduler: Broadcasting large task binary with size 1806.8 KiB
+25/12/06 01:31:10 WARN DAGScheduler: Broadcasting large task binary with size 1807.3 KiB
+25/12/06 01:31:11 WARN DAGScheduler: Broadcasting large task binary with size 1808.0 KiB
+25/12/06 01:31:11 WARN DAGScheduler: Broadcasting large task binary with size 1809.0 KiB
+25/12/06 01:31:12 WARN DAGScheduler: Broadcasting large task binary with size 1811.3 KiB
+25/12/06 01:31:13 WARN DAGScheduler: Broadcasting large task binary with size 1815.7 KiB
+25/12/06 01:31:13 WARN DAGScheduler: Broadcasting large task binary with size 1822.5 KiB
+25/12/06 01:31:14 WARN DAGScheduler: Broadcasting large task binary with size 1834.5 KiB
+25/12/06 01:31:15 WARN DAGScheduler: Broadcasting large task binary with size 1836.4 KiB
+25/12/06 01:31:16 WARN DAGScheduler: Broadcasting large task binary with size 1836.8 KiB
+25/12/06 01:31:16 WARN DAGScheduler: Broadcasting large task binary with size 1837.5 KiB
+25/12/06 01:31:17 WARN DAGScheduler: Broadcasting large task binary with size 1838.5 KiB
+25/12/06 01:31:17 WARN DAGScheduler: Broadcasting large task binary with size 1840.8 KiB
+25/12/06 01:31:18 WARN DAGScheduler: Broadcasting large task binary with size 1845.0 KiB
+25/12/06 01:31:19 WARN DAGScheduler: Broadcasting large task binary with size 1852.4 KiB
+25/12/06 01:31:19 WARN DAGScheduler: Broadcasting large task binary with size 1866.1 KiB
+25/12/06 01:31:20 WARN DAGScheduler: Broadcasting large task binary with size 1868.6 KiB
+25/12/06 01:31:21 WARN DAGScheduler: Broadcasting large task binary with size 1869.1 KiB
+25/12/06 01:31:22 WARN DAGScheduler: Broadcasting large task binary with size 1869.8 KiB
+25/12/06 01:31:22 WARN DAGScheduler: Broadcasting large task binary with size 1870.9 KiB
+25/12/06 01:31:23 WARN DAGScheduler: Broadcasting large task binary with size 1871.8 KiB
+25/12/06 01:31:23 WARN DAGScheduler: Broadcasting large task binary with size 1874.1 KiB
+25/12/06 01:31:24 WARN DAGScheduler: Broadcasting large task binary with size 1878.7 KiB
+25/12/06 01:31:25 WARN DAGScheduler: Broadcasting large task binary with size 1888.0 KiB
+25/12/06 01:31:25 WARN DAGScheduler: Broadcasting large task binary with size 1891.8 KiB
+25/12/06 01:31:26 WARN DAGScheduler: Broadcasting large task binary with size 1892.3 KiB
+25/12/06 01:31:27 WARN DAGScheduler: Broadcasting large task binary with size 1893.0 KiB
+25/12/06 01:31:27 WARN DAGScheduler: Broadcasting large task binary with size 1894.0 KiB
+25/12/06 01:31:28 WARN DAGScheduler: Broadcasting large task binary with size 1896.2 KiB
+25/12/06 01:31:29 WARN DAGScheduler: Broadcasting large task binary with size 1900.8 KiB
+25/12/06 01:31:29 WARN DAGScheduler: Broadcasting large task binary with size 1909.0 KiB
+25/12/06 01:31:30 WARN DAGScheduler: Broadcasting large task binary with size 1924.3 KiB
+25/12/06 01:31:31 WARN DAGScheduler: Broadcasting large task binary with size 1927.6 KiB
+25/12/06 01:31:32 WARN DAGScheduler: Broadcasting large task binary with size 1928.1 KiB
+25/12/06 01:31:32 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 386]" ]
+25/12/06 01:31:32 WARN DAGScheduler: Broadcasting large task binary with size 1928.8 KiB
+25/12/06 01:31:33 WARN DAGScheduler: Broadcasting large task binary with size 1929.8 KiB
+25/12/06 01:31:34 WARN DAGScheduler: Broadcasting large task binary with size 1932.1 KiB
+25/12/06 01:31:34 WARN DAGScheduler: Broadcasting large task binary with size 1936.6 KiB
+25/12/06 01:31:35 WARN DAGScheduler: Broadcasting large task binary with size 1945.0 KiB
+25/12/06 01:31:36 WARN DAGScheduler: Broadcasting large task binary with size 1961.6 KiB
+25/12/06 01:31:37 WARN DAGScheduler: Broadcasting large task binary with size 1964.7 KiB
+25/12/06 01:31:38 WARN DAGScheduler: Broadcasting large task binary with size 1965.2 KiB
+25/12/06 01:31:38 WARN DAGScheduler: Broadcasting large task binary with size 1965.9 KiB
+25/12/06 01:31:39 WARN DAGScheduler: Broadcasting large task binary with size 1966.9 KiB
+25/12/06 01:31:40 WARN DAGScheduler: Broadcasting large task binary with size 1969.2 KiB
+25/12/06 01:31:40 WARN DAGScheduler: Broadcasting large task binary with size 1973.7 KiB
+25/12/06 01:31:41 WARN DAGScheduler: Broadcasting large task binary with size 1982.1 KiB
+25/12/06 01:31:42 WARN DAGScheduler: Broadcasting large task binary with size 1995.6 KiB
+25/12/06 01:31:43 WARN DAGScheduler: Broadcasting large task binary with size 1997.3 KiB
+25/12/06 01:31:44 WARN DAGScheduler: Broadcasting large task binary with size 1997.8 KiB
+25/12/06 01:31:44 WARN DAGScheduler: Broadcasting large task binary with size 1998.5 KiB
+25/12/06 01:31:45 WARN DAGScheduler: Broadcasting large task binary with size 1999.5 KiB
+25/12/06 01:31:45 WARN DAGScheduler: Broadcasting large task binary with size 2001.8 KiB
+25/12/06 01:31:46 WARN DAGScheduler: Broadcasting large task binary with size 2006.3 KiB
+25/12/06 01:31:47 WARN DAGScheduler: Broadcasting large task binary with size 2014.9 KiB
+25/12/06 01:31:48 WARN DAGScheduler: Broadcasting large task binary with size 2028.7 KiB
+25/12/06 01:31:49 WARN DAGScheduler: Broadcasting large task binary with size 2029.1 KiB
+25/12/06 01:31:50 WARN DAGScheduler: Broadcasting large task binary with size 2029.6 KiB
+25/12/06 01:31:50 WARN DAGScheduler: Broadcasting large task binary with size 2030.3 KiB
+25/12/06 01:31:51 WARN DAGScheduler: Broadcasting large task binary with size 2031.3 KiB
+25/12/06 01:31:52 WARN DAGScheduler: Broadcasting large task binary with size 2033.5 KiB
+25/12/06 01:31:52 WARN DAGScheduler: Broadcasting large task binary with size 2037.7 KiB
+25/12/06 01:31:53 WARN DAGScheduler: Broadcasting large task binary with size 2045.3 KiB
+25/12/06 01:31:54 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:31:55 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:31:56 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:31:56 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:31:57 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:31:58 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:31:58 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:31:59 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:32:00 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:32:01 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:32:02 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:32:02 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:32:03 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:32:03 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:32:04 WARN DAGScheduler: Broadcasting large task binary with size 2.0 MiB
+25/12/06 01:32:05 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:06 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:07 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:08 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:08 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:09 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:10 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:10 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:11 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:12 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:13 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:14 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:14 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:15 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:16 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:16 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:17 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:18 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:19 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:20 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:20 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:21 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:22 WARN DAGScheduler: Broadcasting large task binary with size 2.1 MiB
+25/12/06 01:32:23 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:23 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:24 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:25 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:26 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:27 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:28 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:29 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:30 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:31 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:32 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:33 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 327]" ]
+25/12/06 01:32:33 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:34 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:35 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:36 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:37 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:38 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:39 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:40 WARN DAGScheduler: Broadcasting large task binary with size 2.2 MiB
+25/12/06 01:32:41 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:42 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:43 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:44 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:45 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:46 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:47 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:48 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:49 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:50 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:51 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:52 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:53 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:54 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:54 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:56 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:57 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:58 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:32:59 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:33:00 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:33:01 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:33:02 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:33:03 WARN DAGScheduler: Broadcasting large task binary with size 2.3 MiB
+25/12/06 01:33:04 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:05 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:06 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:07 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:08 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:09 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:10 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:11 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:12 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:13 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:14 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:15 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:16 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:17 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:18 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:19 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:20 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:22 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:23 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:23 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:24 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:25 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:26 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:27 WARN DAGScheduler: Broadcasting large task binary with size 2.4 MiB
+25/12/06 01:33:28 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:30 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:31 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:32 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:32 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:33 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 251]" ]
+25/12/06 01:33:33 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:35 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:36 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:37 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:38 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:39 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:40 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:41 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:42 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:43 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:44 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:46 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:47 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:48 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:49 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:50 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:51 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:52 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:53 WARN DAGScheduler: Broadcasting large task binary with size 2.5 MiB
+25/12/06 01:33:54 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:33:55 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:33:56 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:33:57 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:33:58 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:33:59 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:00 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:01 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:03 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:04 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:05 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:06 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:07 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:08 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:09 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:10 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:11 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:13 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:14 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:15 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:16 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:17 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:18 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:19 WARN DAGScheduler: Broadcasting large task binary with size 2.6 MiB
+25/12/06 01:34:20 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:21 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:22 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:23 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:24 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:25 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:26 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:27 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:29 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:30 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:31 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:32 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:33 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:34 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:35 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 232]" ]
+25/12/06 01:34:35 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:37 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:38 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:39 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:40 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:41 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:42 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:44 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:45 WARN DAGScheduler: Broadcasting large task binary with size 2.7 MiB
+25/12/06 01:34:46 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:34:47 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:34:48 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:34:50 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:34:51 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:34:52 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:34:53 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:34:54 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:34:55 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:34:56 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:34:58 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:34:59 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:35:00 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:35:01 INFO GhfsGlobalStorageStatistics: periodic connector metrics: {action_http_delete_request=117, action_http_delete_request_duration=4135, action_http_delete_request_max=101, action_http_delete_request_mean=35, action_http_delete_request_min=26, action_http_post_request=237, action_http_post_request_duration=13069, action_http_post_request_max=139, action_http_post_request_mean=55, action_http_post_request_min=24, action_http_put_request=118, action_http_put_request_duration=11781, action_http_put_request_max=184, action_http_put_request_mean=99, action_http_put_request_min=65, directories_created=1, files_created=1, gcs_api_client_non_found_response_count=360, gcs_api_client_precondition_failed_response_count=1, gcs_api_client_side_error_count=361, gcs_api_time=40500, gcs_api_total_request_count=973, gcs_connector_time=29817, gcs_get_other_request=117, gcs_list_dir_request=4, gcs_list_dir_request_duration=97, gcs_list_dir_request_max=25, gcs_list_dir_request_mean=24, gcs_list_dir_request_min=23, gcs_list_file_request=8, gcs_list_file_request_duration=347, gcs_list_file_request_max=139, gcs_list_file_request_mean=43, gcs_list_file_request_min=15, gcs_metadata_request=372, gcs_metadata_request_duration=8872, gcs_metadata_request_max=133, gcs_metadata_request_mean=23, gcs_metadata_request_min=13, gs_filesystem_create=4, gs_filesystem_initialize=3, op_create=1, op_create_duration=80, op_create_max=80, op_create_mean=80, op_create_min=80, op_exists=2, op_get_file_status=7, op_get_file_status_duration=616, op_get_file_status_max=420, op_get_file_status_mean=88, op_get_file_status_min=25, op_get_list_status_result_size=4, op_hflush=3375, op_hflush_duration=28832, op_hflush_max=339, op_hflush_mean=8, op_list_status=4, op_list_status_duration=105, op_list_status_max=33, op_list_status_mean=26, op_list_status_min=19, op_mkdirs=1, op_mkdirs_duration=184, op_mkdirs_max=184, op_mkdirs_mean=184, op_mkdirs_min=184, stream_write_bytes=479642062, uptimeSeconds=637}
+[CONTEXT ratelimit_period="5 MINUTES [skipped: 1579]" ]
+25/12/06 01:35:01 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:35:02 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:35:03 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:35:04 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:35:05 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:35:07 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:35:08 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:35:09 WARN DAGScheduler: Broadcasting large task binary with size 2.8 MiB
+25/12/06 01:35:10 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:11 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:12 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:13 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:15 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:16 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:17 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:18 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:19 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:20 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:22 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:23 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:24 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:26 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:27 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:28 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:29 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:30 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:31 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:32 WARN DAGScheduler: Broadcasting large task binary with size 2.9 MiB
+25/12/06 01:35:34 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:35 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 213]" ]
+25/12/06 01:35:35 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:37 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:38 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:39 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:40 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:41 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:42 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:44 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:45 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:46 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:47 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:48 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:50 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:51 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:52 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:53 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:55 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:56 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:57 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:58 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:35:59 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:36:00 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:36:02 WARN DAGScheduler: Broadcasting large task binary with size 3.0 MiB
+25/12/06 01:36:03 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:05 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:06 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:07 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:08 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:10 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:11 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:12 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:14 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:15 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:16 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:18 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:19 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:20 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:21 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:23 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:24 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:26 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:27 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:28 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:29 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:31 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:32 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:33 WARN DAGScheduler: Broadcasting large task binary with size 3.1 MiB
+25/12/06 01:36:35 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:36 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 196]" ]
+25/12/06 01:36:37 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:38 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:39 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:41 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:42 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:43 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:45 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:46 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:48 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:49 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:51 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:52 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:53 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:55 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:56 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:58 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:36:59 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:37:01 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:37:02 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:37:03 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:37:04 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:37:05 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:37:07 WARN DAGScheduler: Broadcasting large task binary with size 3.2 MiB
+25/12/06 01:37:08 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:10 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:11 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:12 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:13 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:15 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:16 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:17 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:19 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:20 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:22 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:23 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:24 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:25 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:26 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:28 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:29 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:31 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:32 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:33 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:35 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:36 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:37 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 185]" ]
+25/12/06 01:37:37 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:39 WARN DAGScheduler: Broadcasting large task binary with size 3.3 MiB
+25/12/06 01:37:40 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:42 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:43 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:44 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:45 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:47 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:48 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:49 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:51 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:52 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:53 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:55 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:56 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:57 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:37:59 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:38:00 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:38:01 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:38:03 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:38:04 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:38:05 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:38:07 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:38:08 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:38:09 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:38:11 WARN DAGScheduler: Broadcasting large task binary with size 3.4 MiB
+25/12/06 01:38:12 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:14 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:15 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:17 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:18 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:19 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:20 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:22 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:23 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:25 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:26 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:27 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:29 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:30 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:31 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:33 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:35 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:36 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:38 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 180]" ]
+25/12/06 01:38:38 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:39 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:40 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:42 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:43 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:44 WARN DAGScheduler: Broadcasting large task binary with size 3.5 MiB
+25/12/06 01:38:46 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:38:48 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:38:49 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:38:50 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:38:52 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:38:53 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:38:54 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:38:56 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:38:57 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:38:59 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:01 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:02 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:03 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:04 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:06 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:07 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:09 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:11 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:13 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:15 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:17 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:18 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+
+============================================================
+Gradient Boosted Trees Results (Binary: Win vs Not Win)
+============================================================
+Accuracy: 0.5315
+AUC-ROC: 0.5528
+Precision: 0.6241
+Recall: 0.5714
+F1 Score: 0.5966
+
+Confusion Matrix:
+25/12/06 01:39:20 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
+25/12/06 01:39:22 WARN DAGScheduler: Broadcasting large task binary with size 3.6 MiB
++------------+----------+-----+
+|label_binary|prediction|count|
++------------+----------+-----+
+|         0.0|       0.0|   47|
+|         0.0|       1.0|   53|
+|         1.0|       0.0|   66|
+|         1.0|       1.0|   88|
++------------+----------+-----+
+
+
+Gradient Boosted Trees Feature Importances:
+----------------------------------------
+  home_goals_avg                 0.0517
+  away_shots_avg                 0.0504
+  home_recent_goals              0.0504
+  home_shots_avg                 0.0490
+  away_goals_avg                 0.0488
+  home_games_played              0.0481
+  corsi_diff                     0.0479
+  away_recent_goals              0.0453
+  goals_avg_diff                 0.0452
+  home_points_avg                0.0448
+
+============================================================
+Training Multilayer Perceptron (Neural Network)...
+============================================================
+25/12/06 01:39:27 INFO StrongWolfeLineSearch: Line search t: 0.19460400906265451 fval: 0.69034290866918 rhs: 0.7125430410319923 cdd: 0.03663431415489915
+25/12/06 01:39:27 INFO LBFGS: Step Size: 0.1946
+25/12/06 01:39:27 INFO LBFGS: Val and Grad Norm: 0.690343 (rel: 0.0312) 0.0752682
+25/12/06 01:39:27 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:27 INFO LBFGS: Val and Grad Norm: 0.689839 (rel: 0.000730) 0.0189143
+25/12/06 01:39:28 INFO LBFGS: Step Size: 1.500
+25/12/06 01:39:28 INFO LBFGS: Val and Grad Norm: 0.689742 (rel: 0.000141) 0.0191426
+25/12/06 01:39:28 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:28 INFO LBFGS: Val and Grad Norm: 0.689039 (rel: 0.00102) 0.0389511
+25/12/06 01:39:28 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:28 INFO LBFGS: Val and Grad Norm: 0.688279 (rel: 0.00110) 0.0462462
+25/12/06 01:39:28 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:28 INFO LBFGS: Val and Grad Norm: 0.687169 (rel: 0.00161) 0.0549726
+25/12/06 01:39:29 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:29 INFO LBFGS: Val and Grad Norm: 0.685836 (rel: 0.00194) 0.0656622
+25/12/06 01:39:29 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:29 INFO LBFGS: Val and Grad Norm: 0.685345 (rel: 0.000716) 0.0471688
+25/12/06 01:39:29 INFO StrongWolfeLineSearch: Line search t: 0.2634874606227653 fval: 0.6847111565441144 rhs: 0.6853451161847699 cdd: -0.001122609814422142
+25/12/06 01:39:29 INFO LBFGS: Step Size: 0.2635
+25/12/06 01:39:29 INFO LBFGS: Val and Grad Norm: 0.684711 (rel: 0.000925) 0.0241486
+25/12/06 01:39:30 INFO StrongWolfeLineSearch: Line search t: 0.3488926781448529 fval: 0.6845709856623965 rhs: 0.6847111330650081 cdd: -4.468119239498393E-5
+25/12/06 01:39:30 INFO LBFGS: Step Size: 0.3489
+25/12/06 01:39:30 INFO LBFGS: Val and Grad Norm: 0.684571 (rel: 0.000205) 0.0195557
+25/12/06 01:39:30 INFO LBFGS: Step Size: 1.500
+25/12/06 01:39:30 INFO LBFGS: Val and Grad Norm: 0.684303 (rel: 0.000391) 0.0216098
+25/12/06 01:39:31 INFO StrongWolfeLineSearch: Line search t: 0.475521355029767 fval: 0.6841932291236213 rhs: 0.6843032101441244 cdd: -5.805567456200803E-5
+25/12/06 01:39:31 INFO LBFGS: Step Size: 0.4755
+25/12/06 01:39:31 INFO LBFGS: Val and Grad Norm: 0.684193 (rel: 0.000161) 0.0232732
+25/12/06 01:39:31 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:31 INFO LBFGS: Val and Grad Norm: 0.683873 (rel: 0.000468) 0.0148259
+25/12/06 01:39:31 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:31 INFO LBFGS: Val and Grad Norm: 0.683564 (rel: 0.000452) 0.0423147
+25/12/06 01:39:32 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:32 INFO LBFGS: Val and Grad Norm: 0.683120 (rel: 0.000650) 0.0386129
+25/12/06 01:39:32 INFO StrongWolfeLineSearch: Line search t: 0.22690804690458177 fval: 0.6830663914647668 rhs: 0.6831201820988275 cdd: 0.0013602170923193199
+25/12/06 01:39:32 INFO LBFGS: Step Size: 0.2269
+25/12/06 01:39:32 INFO LBFGS: Val and Grad Norm: 0.683066 (rel: 7.88e-05) 0.0376896
+25/12/06 01:39:32 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:32 INFO LBFGS: Val and Grad Norm: 0.682535 (rel: 0.000778) 0.0222377
+25/12/06 01:39:32 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:32 INFO LBFGS: Val and Grad Norm: 0.682173 (rel: 0.000531) 0.0330363
+25/12/06 01:39:33 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:33 INFO LBFGS: Val and Grad Norm: 0.682121 (rel: 7.54e-05) 0.0372268
+25/12/06 01:39:33 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:33 INFO LBFGS: Val and Grad Norm: 0.681783 (rel: 0.000496) 0.0234549
+25/12/06 01:39:33 INFO StrongWolfeLineSearch: Line search t: 0.5693116089541799 fval: 0.6815106489630507 rhs: 0.6817830739563456 cdd: 4.631864594554767E-5
+25/12/06 01:39:33 INFO LBFGS: Step Size: 0.5693
+25/12/06 01:39:33 INFO LBFGS: Val and Grad Norm: 0.681511 (rel: 0.000400) 0.0160667
+25/12/06 01:39:34 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:34 INFO LBFGS: Val and Grad Norm: 0.681378 (rel: 0.000194) 0.0107263
+25/12/06 01:39:34 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:34 INFO LBFGS: Val and Grad Norm: 0.681207 (rel: 0.000251) 0.0125647
+25/12/06 01:39:34 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:34 INFO LBFGS: Val and Grad Norm: 0.680841 (rel: 0.000538) 0.0182493
+25/12/06 01:39:35 INFO StrongWolfeLineSearch: Line search t: 0.2939523826886107 fval: 0.6807743376937649 rhs: 0.6808407185472829 cdd: -7.3811589576283035E-6
+25/12/06 01:39:35 INFO LBFGS: Step Size: 0.2940
+25/12/06 01:39:35 INFO LBFGS: Val and Grad Norm: 0.680774 (rel: 9.75e-05) 0.0178518
+25/12/06 01:39:35 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:35 INFO LBFGS: Val and Grad Norm: 0.680662 (rel: 0.000165) 0.0195947
+25/12/06 01:39:35 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:35 INFO LBFGS: Val and Grad Norm: 0.680583 (rel: 0.000115) 0.0183525
+25/12/06 01:39:36 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:36 INFO LBFGS: Val and Grad Norm: 0.680520 (rel: 9.29e-05) 0.0122472
+25/12/06 01:39:36 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:36 INFO LBFGS: Val and Grad Norm: 0.680441 (rel: 0.000116) 0.00816973
+25/12/06 01:39:36 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:36 INFO LBFGS: Val and Grad Norm: 0.680355 (rel: 0.000127) 0.0101120
+25/12/06 01:39:37 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:37 INFO LBFGS: Val and Grad Norm: 0.680267 (rel: 0.000130) 0.0115644
+25/12/06 01:39:37 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:37 INFO LBFGS: Val and Grad Norm: 0.680134 (rel: 0.000195) 0.0121537
+25/12/06 01:39:37 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:37 INFO LBFGS: Val and Grad Norm: 0.680087 (rel: 6.99e-05) 0.0204001
+25/12/06 01:39:37 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:37 INFO LBFGS: Val and Grad Norm: 0.680003 (rel: 0.000123) 0.00989647
+25/12/06 01:39:38 INFO GoogleHadoopOutputStream: hflush(): No-op due to rate limit (RateLimiter[stableRate=0.2qps]): readers will *not* yet see flushed data for gs://dataproc-temp-us-east1-329738005609-svqunfcy/89200748-d7f6-4899-a08f-8e6d3d7f13ef/spark-job-history/application_1764975477693_0005.inprogress [CONTEXT ratelimit_period="1 MINUTES [skipped: 460]" ]
+25/12/06 01:39:38 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:38 INFO LBFGS: Val and Grad Norm: 0.679946 (rel: 8.47e-05) 0.00931835
+25/12/06 01:39:38 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:38 INFO LBFGS: Val and Grad Norm: 0.679871 (rel: 0.000110) 0.0114836
+25/12/06 01:39:38 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:38 INFO LBFGS: Val and Grad Norm: 0.679757 (rel: 0.000167) 0.0171563
+25/12/06 01:39:39 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:39 INFO LBFGS: Val and Grad Norm: 0.679628 (rel: 0.000190) 0.0314137
+25/12/06 01:39:39 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:39 INFO LBFGS: Val and Grad Norm: 0.679492 (rel: 0.000201) 0.0143460
+25/12/06 01:39:39 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:39 INFO LBFGS: Val and Grad Norm: 0.679403 (rel: 0.000130) 0.0129408
+25/12/06 01:39:39 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:39 INFO LBFGS: Val and Grad Norm: 0.679337 (rel: 9.76e-05) 0.0131397
+25/12/06 01:39:40 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:40 INFO LBFGS: Val and Grad Norm: 0.679239 (rel: 0.000144) 0.0187103
+25/12/06 01:39:40 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:40 INFO LBFGS: Val and Grad Norm: 0.679126 (rel: 0.000166) 0.0105426
+25/12/06 01:39:40 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:40 INFO LBFGS: Val and Grad Norm: 0.679018 (rel: 0.000159) 0.0117990
+25/12/06 01:39:40 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:40 INFO LBFGS: Val and Grad Norm: 0.678908 (rel: 0.000163) 0.0140107
+25/12/06 01:39:41 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:41 INFO LBFGS: Val and Grad Norm: 0.678719 (rel: 0.000279) 0.0201303
+25/12/06 01:39:41 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:41 INFO LBFGS: Val and Grad Norm: 0.678694 (rel: 3.67e-05) 0.0256206
+25/12/06 01:39:41 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:41 INFO LBFGS: Val and Grad Norm: 0.678482 (rel: 0.000312) 0.0151037
+25/12/06 01:39:41 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:41 INFO LBFGS: Val and Grad Norm: 0.678424 (rel: 8.58e-05) 0.0305355
+25/12/06 01:39:41 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:41 INFO LBFGS: Val and Grad Norm: 0.678359 (rel: 9.57e-05) 0.0117284
+25/12/06 01:39:42 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:42 INFO LBFGS: Val and Grad Norm: 0.678304 (rel: 8.09e-05) 0.0103915
+25/12/06 01:39:42 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:42 INFO LBFGS: Val and Grad Norm: 0.678230 (rel: 0.000109) 0.0208218
+25/12/06 01:39:42 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:42 INFO LBFGS: Val and Grad Norm: 0.678149 (rel: 0.000119) 0.0168120
+25/12/06 01:39:42 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:42 INFO LBFGS: Val and Grad Norm: 0.678062 (rel: 0.000129) 0.0185974
+25/12/06 01:39:43 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:43 INFO LBFGS: Val and Grad Norm: 0.677969 (rel: 0.000136) 0.0165193
+25/12/06 01:39:43 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:43 INFO LBFGS: Val and Grad Norm: 0.677911 (rel: 8.64e-05) 0.0168107
+25/12/06 01:39:43 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:43 INFO LBFGS: Val and Grad Norm: 0.677814 (rel: 0.000143) 0.0113898
+25/12/06 01:39:43 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:43 INFO LBFGS: Val and Grad Norm: 0.677616 (rel: 0.000291) 0.0155545
+25/12/06 01:39:44 INFO StrongWolfeLineSearch: Line search t: 0.6356578500162513 fval: 0.6772161060477374 rhs: 0.6776163107511313 cdd: -9.430675889954049E-5
+25/12/06 01:39:44 INFO LBFGS: Step Size: 0.6357
+25/12/06 01:39:44 INFO LBFGS: Val and Grad Norm: 0.677216 (rel: 0.000591) 0.0498386
+25/12/06 01:39:44 INFO StrongWolfeLineSearch: Line search t: 0.5047469971920062 fval: 0.6771130571352184 rhs: 0.6772160856800261 cdd: 4.9222476699595385E-6
+25/12/06 01:39:44 INFO LBFGS: Step Size: 0.5047
+25/12/06 01:39:44 INFO LBFGS: Val and Grad Norm: 0.677113 (rel: 0.000152) 0.0344633
+25/12/06 01:39:45 INFO StrongWolfeLineSearch: Line search t: 0.42467435447286694 fval: 0.6770428745737832 rhs: 0.6771130425243275 cdd: 3.042910346268639E-8
+25/12/06 01:39:45 INFO LBFGS: Step Size: 0.4247
+25/12/06 01:39:45 INFO LBFGS: Val and Grad Norm: 0.677043 (rel: 0.000104) 0.0285222
+25/12/06 01:39:45 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:45 INFO LBFGS: Val and Grad Norm: 0.676930 (rel: 0.000166) 0.0220202
+25/12/06 01:39:45 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:45 INFO LBFGS: Val and Grad Norm: 0.676742 (rel: 0.000278) 0.0300696
+25/12/06 01:39:45 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:45 INFO LBFGS: Val and Grad Norm: 0.676601 (rel: 0.000209) 0.0469100
+25/12/06 01:39:46 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:46 INFO LBFGS: Val and Grad Norm: 0.676478 (rel: 0.000181) 0.0266391
+25/12/06 01:39:46 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:46 INFO LBFGS: Val and Grad Norm: 0.676364 (rel: 0.000170) 0.0213227
+25/12/06 01:39:46 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:46 INFO LBFGS: Val and Grad Norm: 0.676245 (rel: 0.000175) 0.0157044
+25/12/06 01:39:46 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:46 INFO LBFGS: Val and Grad Norm: 0.676117 (rel: 0.000190) 0.0111351
+25/12/06 01:39:47 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:47 INFO LBFGS: Val and Grad Norm: 0.676079 (rel: 5.58e-05) 0.0258061
+25/12/06 01:39:47 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:47 INFO LBFGS: Val and Grad Norm: 0.676016 (rel: 9.33e-05) 0.0114570
+25/12/06 01:39:47 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:47 INFO LBFGS: Val and Grad Norm: 0.675966 (rel: 7.48e-05) 0.0110905
+25/12/06 01:39:47 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:47 INFO LBFGS: Val and Grad Norm: 0.675918 (rel: 7.07e-05) 0.0121819
+25/12/06 01:39:48 INFO StrongWolfeLineSearch: Line search t: 0.20122339592586624 fval: 0.6758884251011921 rhs: 0.6759177633171449 cdd: -6.112487275387788E-6
+25/12/06 01:39:48 INFO LBFGS: Step Size: 0.2012
+25/12/06 01:39:48 INFO LBFGS: Val and Grad Norm: 0.675888 (rel: 4.34e-05) 0.0318827
+25/12/06 01:39:48 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:48 INFO LBFGS: Val and Grad Norm: 0.675809 (rel: 0.000118) 0.0219156
+25/12/06 01:39:48 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:48 INFO LBFGS: Val and Grad Norm: 0.675707 (rel: 0.000150) 0.0158343
+25/12/06 01:39:48 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:48 INFO LBFGS: Val and Grad Norm: 0.675609 (rel: 0.000145) 0.0145143
+25/12/06 01:39:49 INFO StrongWolfeLineSearch: Line search t: 0.22607173485192655 fval: 0.6755777396548276 rhs: 0.675608946757086 cdd: -2.6281564575244896E-6
+25/12/06 01:39:49 INFO LBFGS: Step Size: 0.2261
+25/12/06 01:39:49 INFO LBFGS: Val and Grad Norm: 0.675578 (rel: 4.62e-05) 0.0400099
+25/12/06 01:39:49 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:49 INFO LBFGS: Val and Grad Norm: 0.675503 (rel: 0.000110) 0.0226474
+25/12/06 01:39:49 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:49 INFO LBFGS: Val and Grad Norm: 0.675432 (rel: 0.000106) 0.0157465
+25/12/06 01:39:50 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:50 INFO LBFGS: Val and Grad Norm: 0.675337 (rel: 0.000140) 0.0232802
+25/12/06 01:39:50 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:50 INFO LBFGS: Val and Grad Norm: 0.675269 (rel: 0.000101) 0.0277376
+25/12/06 01:39:50 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:50 INFO LBFGS: Val and Grad Norm: 0.675200 (rel: 0.000103) 0.0181654
+25/12/06 01:39:50 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:50 INFO LBFGS: Val and Grad Norm: 0.675070 (rel: 0.000192) 0.0156506
+25/12/06 01:39:51 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:51 INFO LBFGS: Val and Grad Norm: 0.674990 (rel: 0.000118) 0.0552811
+25/12/06 01:39:51 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:51 INFO LBFGS: Val and Grad Norm: 0.674895 (rel: 0.000142) 0.0257768
+25/12/06 01:39:51 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:51 INFO LBFGS: Val and Grad Norm: 0.674798 (rel: 0.000143) 0.0229892
+25/12/06 01:39:51 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:51 INFO LBFGS: Val and Grad Norm: 0.674745 (rel: 7.86e-05) 0.0214682
+25/12/06 01:39:51 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:51 INFO LBFGS: Val and Grad Norm: 0.674674 (rel: 0.000106) 0.0576311
+25/12/06 01:39:52 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:52 INFO LBFGS: Val and Grad Norm: 0.674593 (rel: 0.000120) 0.0215682
+25/12/06 01:39:52 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:52 INFO LBFGS: Val and Grad Norm: 0.674565 (rel: 4.23e-05) 0.0168814
+25/12/06 01:39:52 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:52 INFO LBFGS: Val and Grad Norm: 0.674531 (rel: 4.94e-05) 0.0145231
+25/12/06 01:39:52 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:52 INFO LBFGS: Val and Grad Norm: 0.674426 (rel: 0.000156) 0.0185496
+25/12/06 01:39:53 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:53 INFO LBFGS: Val and Grad Norm: 0.674394 (rel: 4.72e-05) 0.0600913
+25/12/06 01:39:53 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:53 INFO LBFGS: Val and Grad Norm: 0.674338 (rel: 8.39e-05) 0.0172201
+25/12/06 01:39:53 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:53 INFO LBFGS: Val and Grad Norm: 0.674318 (rel: 2.89e-05) 0.0120130
+25/12/06 01:39:53 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:53 INFO LBFGS: Val and Grad Norm: 0.674295 (rel: 3.49e-05) 0.0182533
+25/12/06 01:39:54 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:54 INFO LBFGS: Val and Grad Norm: 0.674247 (rel: 7.02e-05) 0.0258801
+25/12/06 01:39:54 INFO StrongWolfeLineSearch: Line search t: 0.43752626111228954 fval: 0.6742043503977303 rhs: 0.6742474034491694 cdd: 6.712332386196898E-8
+25/12/06 01:39:54 INFO LBFGS: Step Size: 0.4375
+25/12/06 01:39:54 INFO LBFGS: Val and Grad Norm: 0.674204 (rel: 6.39e-05) 0.0481067
+25/12/06 01:39:54 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:54 INFO LBFGS: Val and Grad Norm: 0.674138 (rel: 9.81e-05) 0.0295834
+25/12/06 01:39:54 INFO LBFGS: Step Size: 1.000
+25/12/06 01:39:54 INFO LBFGS: Val and Grad Norm: 0.674103 (rel: 5.27e-05) 0.0242899
+25/12/06 01:39:54 INFO LBFGS: Converged because max iterations reached
+
+============================================================
+Multilayer Perceptron Results (Binary: Win vs Not Win)
+============================================================
+Accuracy: 0.5709
+AUC-ROC: 0.5378
+Precision: 0.6380
+Recall: 0.6753
+F1 Score: 0.6562
+
+Confusion Matrix:
++------------+----------+-----+
+|label_binary|prediction|count|
++------------+----------+-----+
+|         0.0|       0.0|   41|
+|         0.0|       1.0|   59|
+|         1.0|       0.0|   50|
+|         1.0|       1.0|  104|
++------------+----------+-----+
+
+
+============================================================
+BASELINE COMPARISONS
+============================================================
+Test set distribution: 154 wins (60.6%), 100 not wins (39.4%)
+
+Majority Class Baseline (always predict Win):
+  Accuracy: 0.6063
+
+Coin Flip Baseline (random 50/50):
+  Accuracy: 0.5000
+
+Weighted Random Baseline (random guess matching class distribution):
+  Accuracy: 0.5226
+
+============================================================
+MODEL COMPARISON SUMMARY (Binary: Win vs Not Win)
+============================================================
+Model                     Accuracy   AUC        Precision  Recall     F1        
+---------------------------------------------------------------------------
+Majority Class            0.6063     N/A        N/A        N/A        N/A       
+Coin Flip                 0.5000     N/A        N/A        N/A        N/A       
+Weighted Random           0.5226     N/A        N/A        N/A        N/A       
+---------------------------------------------------------------------------
+Random Forest             0.5394     0.5140     0.6108     0.6623     0.6355    
+Logistic Regression       0.5512     0.4925     0.6020     0.7662     0.6743    
+Gradient Boosted Trees    0.5315     0.5528     0.6241     0.5714     0.5966    
+Multilayer Perceptron     0.5709     0.5378     0.6380     0.6753     0.6562    
+
