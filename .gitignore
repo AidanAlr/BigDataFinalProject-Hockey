@@ -1,0 +1,6 @@
+.venv/
+./data/results.csv
+./data/NHL_EventData.csv
+./data/results_subset.csv
+./data/NHL_EventData_subset.csv
+
