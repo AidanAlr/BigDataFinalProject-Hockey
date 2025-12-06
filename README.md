@@ -145,6 +145,36 @@ Training set: 9,150 games | Test set distribution: 154 wins (60.6%), 100 not win
 | Random Forest          | 0.5394   | 0.5140 | 0.6108    | 0.6623 | 0.6355 |
 | Gradient Boosted Trees | 0.5315   | 0.5528 | 0.6241    | 0.5714 | 0.5966 |
 
+### Confusion Matrices
+
+**Random Forest:**
+
+|                  | Predicted: Not Win | Predicted: Win |
+| ---------------- | ------------------ | -------------- |
+| Actual: Not Win  | 35                 | 65             |
+| Actual: Win      | 52                 | 102            |
+
+**Logistic Regression:**
+
+|                  | Predicted: Not Win | Predicted: Win |
+| ---------------- | ------------------ | -------------- |
+| Actual: Not Win  | 22                 | 78             |
+| Actual: Win      | 36                 | 118            |
+
+**Gradient Boosted Trees:**
+
+|                  | Predicted: Not Win | Predicted: Win |
+| ---------------- | ------------------ | -------------- |
+| Actual: Not Win  | 47                 | 53             |
+| Actual: Win      | 66                 | 88             |
+
+**Multilayer Perceptron:**
+
+|                  | Predicted: Not Win | Predicted: Win |
+| ---------------- | ------------------ | -------------- |
+| Actual: Not Win  | 41                 | 59             |
+| Actual: Win      | 50                 | 104            |
+
 ### Analysis
 
 All models perform below the majority class baseline (60.6%), which highlights the difficulty of predicting NHL games.
