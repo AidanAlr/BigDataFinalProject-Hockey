@@ -11,6 +11,22 @@ Predict whether an NHL team will **win** a game based on their historical perfor
 - **1 (Win)**: Team earned 2 points (regulation, OT, or shootout win)
 - **0 (Not Win)**: Team earned 0 or 1 points (regulation loss or OT/shootout loss)
 
+## Usage
+
+```bash
+# Run with spark-submit
+spark-submit --driver-memory 4g --executor-memory 4g \
+  experiment.py \
+  --events NHL_EventData.csv \
+  --results results.csv
+
+# Run with subset data for testing
+spark-submit --driver-memory 4g --executor-memory 4g \
+  experiment.py \
+  --events NHL_EventData_subset.csv \
+  --results results_subset.csv
+```
+
 ## NHL Points System
 
 | Outcome          | Points | Label       |
@@ -223,31 +239,3 @@ Both models show relatively flat importance distributions, with no single featur
 - **Corsi** is as a strong predictor, validating its as an advanced hockey metric.
 - **Recent form** features (`home_recent_goals`, `away_recent_goals`) rank highly in GBT, indicating that momentum plays a role.
 - The relatively even distribution of importance across features suggests that no single statistic is a reliable predictor.
-
-## Usage
-
-```bash
-# Run with spark-submit
-spark-submit --driver-memory 4g --executor-memory 4g \
-  experiment.py \
-  --events NHL_EventData.csv \
-  --results results.csv
-
-# Run with subset data for testing
-spark-submit --driver-memory 4g --executor-memory 4g \
-  experiment.py \
-  --events NHL_EventData_subset.csv \
-  --results results_subset.csv
-```
-
-## Project Structure
-
-```
-.
-├── experiment.py            # Main PySpark ML pipeline
-├── NHL_EventData.csv        # Raw event data
-├── results.csv              # Game outcomes (labels)
-├── NHL_EventData_subset.csv # Subset for testing
-├── results_subset.csv       # Subset labels
-└── README.md
-```
