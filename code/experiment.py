@@ -269,7 +269,6 @@ def main():
         .getOrCreate()
     )
 
-    # build team_map_expr *after* SparkSession exists
     from pyspark.sql.functions import create_map
 
     team_map_expr = create_map([lit(x) for x in chain(*TEAM_MAP.items())])
@@ -689,7 +688,7 @@ def main():
         }
 
     # ============================================================
-    # 8a. Random Forest Classifier (Binary)
+    # 8a. Random Forest Classifier
     # ============================================================
     print("\n" + "=" * 60)
     print("Training Random Forest Classifier (Binary)...")
@@ -711,7 +710,7 @@ def main():
     print_feature_importance(rf_model, feature_cols, "Random Forest")
 
     # ============================================================
-    # 8b. Logistic Regression (Binary)
+    # 8b. Logistic Regression
     # ============================================================
     print("\n" + "=" * 60)
     print("Training Logistic Regression (Binary)...")
@@ -735,7 +734,7 @@ def main():
     )
 
     # ============================================================
-    # 8c. Gradient Boosted Trees (Binary)
+    # 8c. Gradient Boosted Trees
     # ============================================================
     print("\n" + "=" * 60)
     print("Training Gradient Boosted Trees (Binary)...")
@@ -759,7 +758,7 @@ def main():
     print_feature_importance(gbt_model, feature_cols, "Gradient Boosted Trees")
 
     # ============================================================
-    # 8d. Multilayer Perceptron (Neural Network) - Binary
+    # 8d. Multilayer Perceptron
     # ============================================================
     print("\n" + "=" * 60)
     print("Training Multilayer Perceptron (Neural Network)...")
