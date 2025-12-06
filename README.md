@@ -1,6 +1,6 @@
 # NHL Game Outcome Prediction with PySpark ML
 
-A distributed machine learning pipeline that predicts NHL game outcomes using historical event data and advanced hockey analytics. Built with Apache Spark MLlib.
+A distributed machine learning pipeline that predicts NHL game outcomes using historical event data and advanced hockey analytics.
 
 ## Problem Statement
 
@@ -149,31 +149,31 @@ Training set: 9,150 games | Test set distribution: 154 wins (60.6%), 100 not win
 
 **Random Forest:**
 
-|                  | Predicted: Not Win | Predicted: Win |
-| ---------------- | ------------------ | -------------- |
-| Actual: Not Win  | 35                 | 65             |
-| Actual: Win      | 52                 | 102            |
+|                 | Predicted: Not Win | Predicted: Win |
+| --------------- | ------------------ | -------------- |
+| Actual: Not Win | 35                 | 65             |
+| Actual: Win     | 52                 | 102            |
 
 **Logistic Regression:**
 
-|                  | Predicted: Not Win | Predicted: Win |
-| ---------------- | ------------------ | -------------- |
-| Actual: Not Win  | 22                 | 78             |
-| Actual: Win      | 36                 | 118            |
+|                 | Predicted: Not Win | Predicted: Win |
+| --------------- | ------------------ | -------------- |
+| Actual: Not Win | 22                 | 78             |
+| Actual: Win     | 36                 | 118            |
 
 **Gradient Boosted Trees:**
 
-|                  | Predicted: Not Win | Predicted: Win |
-| ---------------- | ------------------ | -------------- |
-| Actual: Not Win  | 47                 | 53             |
-| Actual: Win      | 66                 | 88             |
+|                 | Predicted: Not Win | Predicted: Win |
+| --------------- | ------------------ | -------------- |
+| Actual: Not Win | 47                 | 53             |
+| Actual: Win     | 66                 | 88             |
 
 **Multilayer Perceptron:**
 
-|                  | Predicted: Not Win | Predicted: Win |
-| ---------------- | ------------------ | -------------- |
-| Actual: Not Win  | 41                 | 59             |
-| Actual: Win      | 50                 | 104            |
+|                 | Predicted: Not Win | Predicted: Win |
+| --------------- | ------------------ | -------------- |
+| Actual: Not Win | 41                 | 59             |
+| Actual: Win     | 50                 | 104            |
 
 ### Analysis
 
