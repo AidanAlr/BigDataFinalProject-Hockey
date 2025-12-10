@@ -142,7 +142,7 @@ Training set: 9,150 games | Test set distribution: 154 wins (60.6%), 100 not win
 
 | Baseline        | Accuracy | Description                              |
 | --------------- | -------- | ---------------------------------------- |
-| Majority Class  | 0.6063   | Always predict "Win"                     |
+| Majority Class  | 0.6063   | Always predict Home "Win"                     |
 | Weighted Random | 0.5226   | Random guess matching class distribution |
 | Coin Flip       | 0.5000   | Random 50/50 guess                       |
 
