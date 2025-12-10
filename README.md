@@ -11,20 +11,14 @@ Predict whether an NHL team will **win** a game based on their historical perfor
 - **1 (Win)**: Team earned 2 points (regulation, OT, or shootout win)
 - **0 (Not Win)**: Team earned 0 or 1 points (regulation loss or OT/shootout loss)
 
-## Usage
+## Usage - Run Locally
 
 ```bash
 # Run with spark-submit
-spark-submit --driver-memory 4g --executor-memory 4g \
-  experiment.py \
-  --events NHL_EventData.csv \
-  --results results.csv
+spark-submit experiment.py --events data/NHL_EventData.csv --results data/results.csv
 
 # Run with subset data for testing
-spark-submit --driver-memory 4g --executor-memory 4g \
-  experiment.py \
-  --events NHL_EventData_subset.csv \
-  --results results_subset.csv
+spark-submit experiment.py --events data/NHL_EventData_subset.csv --results data/results_subset.csv
 ```
 
 ## NHL Points System
