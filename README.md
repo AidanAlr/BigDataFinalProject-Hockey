@@ -11,15 +11,33 @@ Predict whether an NHL team will **win** a game based on their historical perfor
 - **1 (Win)**: Team earned 2 points (regulation, OT, or shootout win)
 - **0 (Not Win)**: Team earned 0 or 1 points (regulation loss or OT/shootout loss)
 
-## Usage - Run Locally
+## Dependencies
+
+```
+pip install pyspark
+```
+
+## Usage - Run Locally on data subset
 
 ```bash
-# Run with spark-submit
-spark-submit experiment.py --events data/NHL_EventData.csv --results data/results.csv
-
 # Run with subset data for testing
 spark-submit experiment.py --events data/NHL_EventData_subset.csv --results data/results_subset.csv
 ```
+
+## Usage - Run on GCP
+```
+# Upload contents of github to a google cloud storage bucket
+# Create DATAPROC cluster
+# Submit pyspark job to running cluster with arguments:
+# Specify the job script as gs://{YOUR_BUCKET}/experiment.py
+# Specify the arguments as
+1. --events
+2. gs://{YOUR_BUCKET}/data/NHL_EventData.csv
+3. --results
+4. gs://{YOUR_BUCKET}/data/results.csv
+# Submit job
+```
+
 
 ## NHL Points System
 
